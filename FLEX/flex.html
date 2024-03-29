@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *,
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            font-family: poppins, sans-serif;
+        }
+
+        a,
+        li {
+            list-style-type: none;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+
+        header {
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 10%;
+            align-items: center;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        ul>li {
+            display: inline-block;
+            padding: 10px;
+
+        }
+
+        ul>li>a {
+            transition: all 0.3s ease-in-out;
+        }
+
+        ul>li>a:hover {
+            color: black;
+        }
+
+        .humb {
+            /* Sesuaikan posisi hamburger menu di sini */
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: fixed;
+            /* Gunakan position: fixed */
+            top: 20px;
+            /* Atur jarak dari atas */
+            right: 20px;
+            /* Atur jarak dari kanan */
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .menu {
+                display: none;
+                /* Mengubah menu menjadi kolom saat dibuka */
+                flex-direction: column;
+                /* Mengatur menu agar menutupi layar penuh */
+                width: 100%;
+                /* Membuat padding di sisi atas dan bawah menu */
+                padding: 20px 0;
+                /* Menambahkan efek transisi */
+                transition: all 0.3s ease;
+            }
+
+
+            .menu li {
+                margin: 10px 0;
+                /* Mengurangi margin horizontal */
+            }
+
+
+
+
+            .navbar {
+                padding: 15px 20px;
+                display: flex;
+                justify-content: space-between;
+                /* Menggunakan justify-content: space-between */
+                align-items: center;
+            }
+
+
+
+            .humb {
+                display: flex;
+                padding: 20px;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <header>
+            <h2>Yudan <br>Nur Alif</h2>
+            
+            <nav>
+                <ul class="menu show" id="menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Roadmap</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="humb" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </header>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const menu = document.getElementById('menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            menu.classList.toggle('menu');
+        });
+    </script>
+
+
+
+    <script src="flex.js"></script>
+</body>
+
+</html>

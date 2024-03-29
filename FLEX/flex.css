@@ -1,0 +1,111 @@
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-family: poppins, sans-serif;
+}
+
+a,
+li {
+    list-style-type: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+header {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+    align-items: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+ul>li {
+    display: inline-block;
+    padding: 10px;
+
+}
+
+ul>li>a {
+    transition: all 0.3s ease-in-out;
+}
+
+ul>li>a:hover {
+    color: black;
+}
+
+.humb {
+    /* Sesuaikan posisi hamburger menu di sini */
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        /* Mengubah menu menjadi kolom saat dibuka */
+        flex-direction: column;
+        /* Mengatur menu agar menutupi layar penuh */
+        width: 100%;
+        /* Membuat padding di sisi atas dan bawah menu */
+        padding: 20px 0;
+        /* Menambahkan efek transisi */
+        transition: all 0.3s ease;
+    }
+    
+    
+
+    header > h2 {
+        
+    }
+
+
+    .menu li {
+        margin: 10px 0;
+        /* Mengurangi margin horizontal */
+    }
+
+
+
+
+    .navbar {
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    .humb {
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

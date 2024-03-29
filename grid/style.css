@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+button {
+    color: #eaeaea;
+    cursor: pointer;
+    border: transparent;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: blue;
+    box-shadow: 5px 7px 15px 1px aqua;
+}
+
+h2 {
+    font-size: 3rem;
+    animation: ngajleng 3s infinite;
+}
+
+@keyframes ngajleng {
+    0% {
+        transform: matrix3d(0);
+    }
+    50%{
+        transform: matrix3d(20px);
+    }
+    100%{
+        transform: matrix3D(0);
+    }
+}
+
+button:hover {
+    background-color: red;
+    transform: scale(6px);
+    transition: 0.3s all ease-in-out;
+}
